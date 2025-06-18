@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SADC CBDC Wallet</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <img src="sadc_logo.png" alt="SADC CBDC Logo" width="120"/>
+    <h1>SADC CBDC Web3 Wallet</h1>
+  </header>
+
+  <section id="wallet">
+    <input type="password" id="password" placeholder="Enter password or seed" />
+    <button onclick="createWallet()">Create Wallet</button>
+    <p>Address: <span id="address"></span></p>
+    <p>Balance: <span id="balance">0 ZAR</span></p>
+    <button onclick="sendTransaction()">Send</button>
+    <button onclick="generateQR()">Receive (QR)</button>
+  </section>
+
+  <section id="qr-section" style="display:none;">
+    <h3>Your QR Code</h3>
+    <canvas id="qrcode"></canvas>
+  </section>
+
+  <script src="scripts/wallet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</body>
+</html>

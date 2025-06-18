@@ -1,0 +1,1 @@
+console.log("USSD menu simulation initialized...");
